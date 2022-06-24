@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "https://example.org/fhir/StructureDefinition/Patior",
+  "url": "https://hospitale.org/fhir/StructureDefinition/Patior",
   "name": "Patior",
   "status": "draft",
   "fhirVersion": "4.0.1",
