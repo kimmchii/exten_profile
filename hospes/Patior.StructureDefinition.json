@@ -1,0 +1,364 @@
+{
+  "resourceType": "StructureDefinition",
+  "id":"3",
+  "url": "https://hospitale.org/fhir/StructureDefinition/Patior",
+  "name": "Patior",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3
+      },
+      {
+        "id": "Patient.extension:Nationality",
+        "path": "Patient.extension",
+        "sliceName": "Nationality",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.extension:bloodType",
+        "path": "Patient.extension",
+        "sliceName": "bloodType",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://warfar.org/fhir/StructureDefinition/Blood"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.extension:Religion",
+        "path": "Patient.extension",
+        "sliceName": "Religion",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-religion"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier:National-ID",
+        "path": "Patient.identifier",
+        "sliceName": "National-ID",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.identifier:National-ID.system",
+        "path": "Patient.identifier.system",
+        "min": 1,
+        "fixedUri": "http://moi.go.th/national-id"
+      },
+      {
+        "id": "Patient.identifier:National-ID.value",
+        "path": "Patient.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier:Passport",
+        "path": "Patient.identifier",
+        "sliceName": "Passport",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.identifier:Passport.system",
+        "path": "Patient.identifier.system",
+        "min": 1,
+        "fixedUri": "https://consular.mfa.go.th/passport"
+      },
+      {
+        "id": "Patient.identifier:Passport.value",
+        "path": "Patient.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "min": 1
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.name.family",
+        "path": "Patient.name.family",
+        "min": 1
+      },
+      {
+        "id": "Patient.name.given",
+        "path": "Patient.name.given",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.name.prefix",
+        "path": "Patient.name.prefix",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.telecom.system",
+        "path": "Patient.telecom.system",
+        "min": 1,
+        "fixedCode": "phone"
+      },
+      {
+        "id": "Patient.telecom.value",
+        "path": "Patient.telecom.value",
+        "min": 1
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "min": 1
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "min": 1
+      },
+      {
+        "id": "Patient.birthDate.extension",
+        "path": "Patient.birthDate.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Patient.birthDate.extension:birthTime",
+        "path": "Patient.birthDate.extension",
+        "sliceName": "birthTime",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-birthTime"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.deceased[x]",
+        "path": "Patient.deceased[x]",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.use",
+        "path": "Patient.address.use",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.text",
+        "path": "Patient.address.text",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.line",
+        "path": "Patient.address.line",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.address.city",
+        "path": "Patient.address.city",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.district",
+        "path": "Patient.address.district",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.state",
+        "path": "Patient.address.state",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.postalCode",
+        "path": "Patient.address.postalCode",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.country",
+        "path": "Patient.address.country",
+        "min": 1
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "binding": {
+          "strength": "required"
+        }
+      },
+      {
+        "id": "Patient.maritalStatus.coding",
+        "path": "Patient.maritalStatus.coding",
+        "max": "1"
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact.relationship",
+        "path": "Patient.contact.relationship",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.contact.relationship.coding",
+        "path": "Patient.contact.relationship.coding",
+        "max": "1"
+      },
+      {
+        "id": "Patient.contact.name",
+        "path": "Patient.contact.name",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.telecom",
+        "path": "Patient.contact.telecom",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.contact.telecom.system",
+        "path": "Patient.contact.telecom.system",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.telecom.value",
+        "path": "Patient.contact.telecom.value",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.address.use",
+        "path": "Patient.contact.address.use",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.address.text",
+        "path": "Patient.contact.address.text",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.address.line",
+        "path": "Patient.contact.address.line",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.contact.address.city",
+        "path": "Patient.contact.address.city",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.address.district",
+        "path": "Patient.contact.address.district",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.address.state",
+        "path": "Patient.contact.address.state",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.address.postalCode",
+        "path": "Patient.contact.address.postalCode",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.address.country",
+        "path": "Patient.contact.address.country",
+        "min": 1
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.generalPractitioner",
+        "path": "Patient.generalPractitioner",
+        "max": "1"
+      },
+      {
+        "id": "Patient.managingOrganization",
+        "path": "Patient.managingOrganization",
+        "max": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "1",
+  "title": "hospes concept map",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "112144000",
+              "display": "Blood group A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "BG01"
+        },
+        {
+          "target": [
+            {
+              "code": "112149005",
+              "display": "Blood group B",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "BG02"
+        },
+        {
+          "target": [
+            {
+              "code": "58460004",
+              "equivalence": "equivalent",
+              "display": "Blood group O"
+            }
+          ],
+          "code": "BG03"
+        },
+        {
+          "target": [
+            {
+              "code": "165743006",
+              "equivalence": "equivalent",
+              "display": "Blood group AB"
+            }
+          ],
+          "code": "BG04"
+        }
+      ],
+      "source": "http://hospes.com/blood",
+      "target": "http://snomed.info/sct"
+    }
+  ],
+  "url": "http://hospes.com/blood_snomed",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>hospes concept map</h2><tt>http://hospes.com/blood_snomed</tt></div>"
+  },
+  "sourceCanonical": "http://hospes.com/bloodgroup",
+  "targetCanonical": "http://hospes.com/bloodgroup_snomed",
+  "name": "Hospes_concept"
+}

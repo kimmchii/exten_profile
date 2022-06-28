@@ -1,0 +1,43 @@
+{
+    "resourceType": "ValueSet",
+    "id": "52",
+    "url": "http://hospes.com/bloodgroup",
+    "version": "1.0",
+    "name": "Hospes_hosxp_VS",
+    "title": "hospes value set",
+    "status": "draft",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "email"
+                }
+            ]
+        }
+    ],
+    "compose": {
+        "include": [
+            {
+                "system": "http://hospes.com/blood",
+                "concept": [
+                    {
+                        "code": "BG01",
+                        "display": "A"
+                    },
+                    {
+                        "code": "BG02",
+                        "display": "B"
+                    },
+                    {
+                        "code": "BG03",
+                        "display": "O"
+                    },
+                    {
+                        "code": "BG04",
+                        "display": "AB"
+                    }
+                ]
+            }
+        ]
+    }
+}
