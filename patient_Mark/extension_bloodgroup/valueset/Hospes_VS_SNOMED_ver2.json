@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://hospes.com/bloodgroup_snomed",
+  "version": "2.0",
+  "title": "hospes SNOMED CT",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct"
+      },
+      {
+        "filter": [
+          {
+            "property": "Group_composite",
+            "op": "is-a",
+            "value": "365640002"
+          },
+          {
+            "property": "Group_phenotype",
+            "op": "is-a",
+            "value": "112143006"
+          }
+        ],
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>hospes SNOMED CT</h2><tt>http://hospes.com/bloodgroup_snomed</tt></div>"
+  },
+  "name": "Hospes_VS_SNOMED"
+}

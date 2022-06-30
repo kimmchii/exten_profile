@@ -1,0 +1,79 @@
+{
+  "resourceType": "ValueSet",
+  "id": "114",
+  "url": "http://hospes.com/bloodgroup",
+  "version": "2.0",
+  "title": "hospes value set",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://hospes.com/blood",
+        "concept": [
+          {
+            "code": "A_p",
+            "display": "Blood group: A, Rh: positive"
+          },
+          {
+            "code": "A_n",
+            "display": "Blood group: A, Rh: negative"
+          },
+          {
+            "code": "B_p",
+            "display": "Blood group: B, Rh: positive"
+          },
+          {
+            "code": "B_n",
+            "display": "Blood group: B, Rh: negative"
+          },
+          {
+            "code": "O_p",
+            "display": "Blood group: O, Rh: positive"
+          },
+          {
+            "code": "O_n",
+            "display": "Blood group: O, Rh: negative"
+          },
+          {
+            "code": "AB_p",
+            "display": "Blood group: AB, Rh: positive"
+          },
+          {
+            "code": "AB_n",
+            "display": "Blood group: AB, Rh: negtive"
+          },
+          {
+            "code": "A",
+            "display": "Blood group: A, Rh: unidentified"
+          },
+          {
+            "code": "B",
+            "display": "Blood group: B, Rh: unidentified"
+          },
+          {
+            "code": "O",
+            "display": "Blood group: O, Rh: unidentified"
+          },
+          {
+            "code": "AB",
+            "display": "Blood group: AB, Rh: unidentified"
+          }
+        ]
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>hospes value set</h2><tt>http://hospes.com/bloodgroup</tt></div>"
+  },
+  "name": "Hospes_hosxp_VS"
+}

@@ -1,0 +1,89 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "113",
+  "title": "hospes",
+  "url": "http://hospes.com/blood",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "description": "Blood group",
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "A_p",
+      "display": "Blood group A Rh(D) positive",
+      "definition": "Blood group: A, Rh: positive"
+    },
+    {
+      "code": "A_n",
+      "display": "Blood group A Rh(D) negative",
+      "definition": "Blood group: A, Rh: negative"
+    },
+    {
+      "display": "Blood group B Rh(D) positive",
+      "code": "B_p",
+      "definition": "Blood group: B, Rh: positive"
+    },
+    {
+      "code": "B_n",
+      "display": "Blood group B Rh(D) negative",
+      "definition": "Blood group: B, Rh: negative"
+    },
+    {
+      "code": "O_p",
+      "display": "Blood group O Rh(D) positive",
+      "definition": "Blood group: O, Rh: positive"
+    },
+    {
+      "code": "O_n",
+      "display": "Blood group O Rh(D) negative",
+      "definition": "Blood group: O, Rh: negative"
+    },
+    {
+      "code": "AB_p",
+      "display": "Blood group AB Rh(D) positive",
+      "definition": "Blood group: AB, Rh: positive"
+    },
+    {
+      "code": "AB_n",
+      "display": "Blood group AB Rh(D) negative",
+      "definition": "Blood group: AB, Rh: negative"
+    },
+    {
+      "code": "A",
+      "display": "Blood group A",
+      "definition": "Blood group: A, Rh: unidentified"
+    },
+    {
+      "code": "B",
+      "display": "Blood group B",
+      "definition": "Blood group: B, Rh: unidentified"
+    },
+    {
+      "code": "O",
+      "display": "Blood group O",
+      "definition": "Blood group: O, Rh: unidentified"
+    },
+    {
+      "code": "AB",
+      "display": "Blood group AB",
+      "definition": "Blood group: AB, Rh: unidentified"
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>hospes</h2><tt>http://hospes.com/blood</tt><p>Blood group</p></div>"
+  },
+  "name": "Hospes_hosxp",
+  "caseSensitive": false,
+  "versionNeeded": false,
+  "count": 12
+}
